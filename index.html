@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sit On Chair</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans:400,800&amp;subset=latin-ext"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,600,700&amp;subset=latin-ext"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="css/mainPageStyle.css">
+
+</head>
+<body>
+
+<!-- ------------------------------------ HEADER | LOGO-->
+
+<header class="main_header flex-Y-center">
+    <div class="wrapper flex-X-space-between">
+        <div class="header__logo">
+            <a href="#">SIT <span class="color">ON</span> CHAIR</a>
+        </div>
+        <nav>
+
+            <ul class="menu">
+                <li id="menu_company">O FIRMIE
+
+                    <div id="sub_container">
+                        <ul id="submenu_company">
+                            <li>Aktualności</li>
+                            <li>Nasz team</li>
+                            <li>Historia</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>GALERIA</li>
+                <li>KONTAKT</li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+<!---------------------------------------------SLIDER-->
+
+<section class="slider flex-Y-center">
+    <div class="wrapper flex-X-space-between">
+        <div class="arrow color" id="previousArr">&lt;</div>
+        <div class="slider_pic_container">
+            <img src="images/black_chair.png" alt="" id="black-chair">
+            <img src="images/orange_chair.png" alt="" id="orange-chair">
+            <img src="images/red_chair.png" alt="" id="red-chair">
+        </div>
+        <div class="slider__text__content">
+            <p>SIT <span class="color">ON</span> OUR <span class="color">CHAIR</span></p>
+            <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, in ut. Corporis eos impedit sunt
+                vitae!
+                Alias animi aspernatur cumque dolores doloribus ducimus eius, enim minima nesciunt qui quod
+                voluptatum!
+            </article>
+            <button type="button" class="slider__button">ZOBACZ WIĘCEJ</button>
+        </div>
+        <div class="arrow color" id="nextArr">&gt;</div>
+    </div>
+</section>'
+
+<!------------------------ CHAIR TO CHOOSE -------->
+
+<section class="chair__list flex-Y-center">
+    <div class="wrapper flex-X-space-between">
+        <div class="chair__dimensions chair1" id="chair-left">
+            <div class="chair__bright__bar bar_left" id="bar-left"><p>Chair CLAIR</p></div>
+        </div>
+        <div class="chair__dimensions chair2" id="chair-right">
+            <div class="chair__bright__bar bar_right" id="bar-right"><p>Chair MARGARITA</p></div>
+        </div>
+        <div class="chair__text__right"></div>
+    </div>
+
+</section>
+
+<!---------------------------------- PRICE BOXES-->
+
+<section class="prices flex-Y-center">
+
+    <div class="wrapper flex-X-space-between">
+
+        <!--BOX LEFT-->
+        <div class="price__box">
+            <p class="box__title">BASIC PLAN</p>
+            <div class="price__circle">
+                <div class="price__text">9<span class="num_down">5</span><span class="cents_up">95</span></div>
+                <p class="price__per__month">PLN/MSC</p>
+            </div>
+            <div class="card shop_card"><p>Zakup towaru + dowóz</p></div>
+            <div class="card service_card"><p>Serwis</p></div>
+            <div class="price__box__btn"><a>DOŁĄCZ</a></div>
+        </div>
+
+        <!-- MIDDLE BOX-->
+        <div class="price__box middle">
+            <p class="box__title">STANDARD PLAN</p>
+            <div class="price__circle">
+                <div class="price__text">9<span class="num_down">5</span><span class="cents_up">95</span></div>
+                <p class="price__per__month">PLN/MSC</p>
+            </div>
+            <div class="card shop_card"><p>Zakup towaru + dowóz</p></div>
+            <div class="card service_card"><p>Serwis</p></div>
+            <div class="card warranty"><p>Gwaracnja 5 lat</p></div>
+            <div class="price__box__btn"><a>DOŁĄCZ</a></div>
+        </div>
+
+        <!-- RIGHT BOX  -->
+        <div class="price__box right">
+            <p class="box__title">ADVANCE PLAN</p>
+            <div class="price__circle">
+                <div class="price__text">9<span class="num_down">5</span><span class="cents_up">95</span></div>
+                <p class="price__per__month">PLN/MSC</p>
+            </div>
+            <div class="card shop_card"><p>Zakup towaru + dowóz</p></div>
+            <div class="card service_card"><p>Serwis</p></div>
+            <div class="card warranty"><p>Gwaracnja 5 lat</p></div>
+            <div class="card advices"><p>Porady projektanta</p></div>
+
+            <div class="price__box__btn"><a>DOŁĄCZ</a></div>
+        </div>
+    </div>
+</section>
+
+<!--------------------------------CALCULATOR SECTION-->
+
+<section class="application ">
+    <div class="wrapper">
+        <div class="main_width">
+            <section class="choice_part inline">
+                <header>
+                    <h3>SKOMPONUJ SWOJE KRZESŁO</h3>
+                    <span class="green_bell"></span>
+                </header>
+                <div class="form">
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz rodzaj</span>
+                        <span class="list_arrow"></span>
+                        <ul class="list_panel chair_panel">
+                            <li data-price="300">Clair</li>
+                            <li data-price="200">Margarita</li>
+                            <li data-price="180">Selena</li>
+                        </ul>
+                    </div>
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz kolor</span>
+                        <span class="list_arrow"></span>
+                        <ul class="list_panel color_panel">
+                            <li data-price="50">Czerwony</li>
+                            <li data-price="55">Czarny</li>
+                            <li data-price="45">Pomarańczowy</li>
+                        </ul>
+                    </div>
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz materiał</span>
+                        <span class="list_arrow"></span>
+                        <ul class="list_panel fabric_panel">
+                            <li data-price="0">Tkanina</li>
+                            <li data-price="90">Skóra</li>
+                        </ul>
+                    </div>
+
+                    <div class="check_line">
+                        <input type="checkbox" id="transport" data-price="80">
+                        <label for="transport">Transport</label>
+                    </div>
+                    <!--<div class="checkbox"></div>-->
+                    <!--<span class="list_label inline_text">Transport</span>-->
+                </div>
+            </section>
+
+            <section class="image_part inline">
+                <img src="images/red_chair.png">
+            </section>
+
+            <section class="summary_part inline">
+                <header class="align_right">
+                    <h3>PODSUMOWANIE</h3>
+                    <span class="green_bell"></span>
+                </header>
+
+                <div class="summary_panel">
+                    <div class="panel_left">
+                        <h4   id="title">Twój fotel</h4>
+                        <span id="color"></span>
+                        <span id="pattern"></span>
+                        <span id="transportN"></span>
+                    </div>
+                    <div class="panel_right">
+                        <h4    class="price_values"  id="title value"></h4>
+                        <span  class="price_values"  id="color value"></span>
+                        <span  class="price_values"  id="pattern value"></span>
+                        <span  class="price_values"  id="transport value"></span>
+                    </div>
+                    <div class="sum_label">SUMA</div>
+                    <div class="sum"><strong id="sum"></strong></div>
+                </div>
+                <a href="" class="green_button">Zamawiam</a>
+            </section>
+        </div>
+    </div>
+</section>
+
+
+<!-----------------------------------CONTACT | FORM SECTION-->
+
+<section class="contact">
+    <div class="wrapper">
+        <p id="contact_title">KONTAKT</p>
+
+        <div class="form_container">
+            <div class="form">
+                <input type="text" placeholder="Imię" id="name">
+                <input type="email" placeholder="E-mail " id="mail">
+                <textarea name="message" id="message" placeholder="Twoja wiadomość" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="right_side">
+                <div class="chair_pic"><img src="images/red_chair.png" alt=""></div>
+                <div class="check">
+                    <div class="check_line">
+                        <input type="checkbox" id="accept_terms_box">
+                        <label for="accept_terms_box">Zgadzam się na przetwarzanie danych osobowych</label>
+                    </div>
+                    <div class="btn"><p>WYŚLIJ</p></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!------------------------------------FOOOTER-->
+<footer>
+    <div class="wrapper">
+        <p>Copyright 2018 | All Rights Reserved - Sit On Chair</p>
+        <div class="icon_bar">
+            <img src="images/flickr.png" alt="">
+            <img src="images/vimeo.png" alt="">
+            <img src="images/pinterest.png" alt="">
+            <img src="images/twitter.png" alt="">
+        </div>
+        <p class="sit">SIT <span>ON</span> CHAIR</p>
+    </div>
+
+</footer>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
