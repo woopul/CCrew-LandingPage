@@ -1,231 +1,133 @@
-var companyLi = document.getElementById('menu_company');
-var companySubmenu = document.getElementById('sub_container');
-// var chairToChooseWindow = document.getElementsByClassName('.chair_dimensions');
+/* -----------------------------------------------
+/* How to use? : Check the GitHub README
+/* ----------------------------------------------- */
 
-//pictures slider - Node List
-var sliderPic = document.querySelectorAll(".slider img");
-
-console.log(sliderPic);
-
-// SUBMENU COMPANY (Show/Slide Down) after mouseenter
-$('#menu_company').on('mouseenter',()=>{
-    $('#sub_container').slideDown();
+/* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
+/*
+particlesJS.load('particles-js', 'particles.json', function() {
+  console.log('particles.js loaded - callback');
 });
-//SUBMENU COMPANY Hide after mouseleave
-$('#sub_container').on('mouseleave', event =>{
-    $(event.currentTarget).slideUp();
-});
+*/
 
+/* Otherwise just put the config content (json): */
 
-//CHAIR TO CHOOSE - hide/show chair bar on mouse enter/leave (LEFT)
-$('#chair-left').on('mouseenter mouseleave', ()=>{
-    $('#bar-left').fadeToggle();
-});
-
-//CHAIR TO CHOOSE - hide/show chair bar on mouse enter/leave (RIGHT)
-$('#chair-right').on('mouseenter mouseleave', ()=>{
-    $('#bar-right').fadeToggle();
-});
-
-
-//Pic array - set all but one on hide property
-const picArr =[...$('.slider_pic_container img')];
-$(picArr).hide();
-$(picArr[1]).show();
-// $(picArr).addClass('hide');
-// $(picArr[1]).removeClass('hide');
-
-
-$('#previousArr').on('click', ()=>{
-    for (var i = 0; i < picArr.length; i++) {
-        // console.log(sliderPicArray[i]);
-        if(picArr[i].style.display !== "none") {
-            // sliderPicArray[i].style.display = "none";
-            $(picArr[i]).fadeOut(300);
-            if (i === 0) {
-                // sliderPicArray[sliderPicArray.length - 1].style.display = "block";
-                $(picArr[picArr.length - 1]).delay(300).fadeIn(400);
-                break;
-            } else {
-                // sliderPicArray[i - 1].style.display = "block";
-                $(picArr[i - 1]).delay(300).fadeIn(400);
-                break;
-            }
+particlesJS('particles-js',
+  
+  {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
+          "enable": true,
+          "value_area": 800
         }
-    }
-});
-
-
-$('#nextArr').on('click', ()=>{
-    for (var i = 0; i < picArr.length; i++) {
-        // console.log(sliderPicArray[i]);
-        if(picArr[i].style.display !== "none") {
-
-            $(picArr[i]).fadeOut(300);
-
-            if (i === picArr.length-1) {
-                $(picArr[0]).delay(300).fadeIn(400);
-                break;
-
-            } else {
-
-                $(picArr[i + 1]).delay(300).fadeIn(400);
-                break;
-            }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
         }
-    }
-});
-
-//
-// $('#nextArr').on('click', ()=>{
-//     for (var i = 0; i < picArr.length; i++) {
-//         // console.log(sliderPicArray[i]);
-//         console.log($(picArr[i]).attr('class').split(" "));
-//         console.log(picArr[i].classList);
-//         if($(picArr[i]).hasClass('hide') === false) {
-//
-//             $(picArr[i]).addClass('animation-slideOut-right');
-//             $(picArr[i]).delay(2000).addClass('hide');
-//
-//
-//             if (i === picArr.length-1) {
-//
-//                 $(picArr[0]).removeClass('hide');
-//                 $(picArr[0]).addClass('animation-slideIn-left');
-//                 break;
-//
-//             } else {
-//                 $(picArr[0]).removeClass('hide');
-//                 $(picArr[i + 1]).addClass('animation-slideIn-left');
-//                 break;
-//             }
-//         }
-//     }
-// });
-
-
-
-//----------Dropdown list show / hide
-
-var dropdownLists = document.querySelectorAll(".drop_down_list"),
-    panelLists = document.querySelector(".list_panel");
-
-// add listener to each dropdown list, show/hide sublist on click
-dropdownLists.forEach(function (list) {
-    var panelList = list.querySelector("ul");
-    panelList.style.display = 'none';
-    list.addEventListener('click', function () {
-        if (panelList.style.display === "none") {
-            panelList.style.display = "block";
-        } else {
-            panelList.style.display = "none";
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
         }
-    });
-});
-
-//---------- Costs / Summary
-
-var chairPanelList = document.querySelectorAll(".chair_panel li"),
-    colorPanelList = document.querySelectorAll(".color_panel li"),
-    fabric_panel = document.querySelectorAll(".fabric_panel li"),
-    //fields right panel
-    summaryTitle = document.getElementById('title'),
-    summaryColor = document.getElementById('color'),
-    summaryPattern = document.getElementById('pattern'),
-    summaryTransport = document.getElementById('transportN'),
-    //value fields right panel
-     titleValue = document.getElementById('title value'),
-     colorValue = document.getElementById('color value'),
-     patternValue = document.getElementById('pattern value'),
-     transportValue = document.getElementById('transport value'),
-     sumValue = document.getElementById('sum');
-
-
-
-// for (var i = 0; i < chairPanelList.length; i++) {
-//     chairPanelList[i].addEventListener('click', function () {
-//         switch (i){
-//             case 0:
-//                 document.
-//         }
-//     })
-// }
-
-
-//for choosen item from Chair-Kind-Sublist, add its inner tekst to the summary left panel
-chairPanelList.forEach(function (li) {
-    li.addEventListener('click', function () {
-        //summary Chair name equals chosen chair form sublist
-        summaryTitle.innerText = "Chair " +  this.innerText;
-        //price of chair equals this assigned in dataset data-price
-        titleValue.innerText = this.dataset.price;
-        //print sum of all values - after each change refreshed
-        sumValue.innerText = sumAll();
-
-    });
-
-
-});
-
-//for choosen item from Color-sublist, add its inner tekst to the summary left panel
-colorPanelList.forEach(function (li) {
-    li.addEventListener('click', function () {
-        summaryColor.innerText =  this.innerText;
-        //price of chair equals one thats assigned to this li in dataset
-        colorValue.innerText = this.dataset.price;
-        //print sum of all values - after each change refreshed
-        sumValue.innerText = sumAll();
-    });
-
-});
-
-//for choosen item from Fabric-sublist, add its inner tekst to the summary left panel
-fabric_panel.forEach(function (li) {
-    li.addEventListener('click', function () {
-        summaryPattern.innerText = "Chair " +  this.innerText;
-        //price of chair equals this assigned in dataset data-price
-        patternValue.innerText = this.dataset.price;
-        //print sum of all values - after each change refreshed
-        sumValue.innerText = sumAll();
-    });
-});
-
-
-//checkbox - while checked, add "transport" to the summary left panel
-document.getElementById('transport').addEventListener('change', function () {
-    // summaryTransport.innerText = this.checked? "transport" : "";
-    // //add transport price
-    // transportValue.innerText = this.checked? this.dataset.price : "";
-    // //print sum of all values - after each change-refreshed
-    if(this.checked){
-        summaryTransport.innerText = "transport";
-        transportValue.innerText = this.dataset.price;
-    } else {
-        summaryTransport.innerText = '';
-        transportValue.innerText = '';
+      },
+      "size": {
+        "value": 5,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 400,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true,
+    "config_demo": {
+      "hide_card": false,
+      "background_color": "#b61924",
+      "background_image": "",
+      "background_position": "50% 50%",
+      "background_repeat": "no-repeat",
+      "background_size": "cover"
     }
+  }
 
-
-    sumValue.innerText = sumAll();
-});
-
-
-// Sum all cost of checked items - panel right summary
-function sumAll(){
-    var sum = 0;
-    var priceValues = document.querySelectorAll('.price_values');
-    priceValues.forEach(function (value) {
-        sum += Number(value.innerText);
-    });
-    if (sum === 0){
-        return "";
-    } else return sum+" zl";
-}
-
-console.log(sumAll());
-
-// let slideLeftIn = ()=>{
-//
-// }
-
-
+);
