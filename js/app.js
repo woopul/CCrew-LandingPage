@@ -10,18 +10,6 @@ particlesJS.load('particles-js', 'particles.json', function() {
 */
 
 
-import Typed from 'typed.js';
-
-$(document).ready(() => {
-    const options = {
-        strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
-        typeSpeed: 40
-    }
-
-    var typed = new Typed(".typo", options);
-});
-
-
 /* Otherwise just put the config content (json): */
 
 particlesJS('particles-js',

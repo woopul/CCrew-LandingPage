@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Landing page</title>
 
+    <script src="js/typed.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+
+
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&amp;subset=latin-ext" rel="stylesheet">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
@@ -23,8 +28,7 @@
             <div class="content">
                 <h1>
                     I AM
-                    <span id="typo">Developer</span>
-                    <span class="carriage">|</span>
+                    <span id="typed" class="typo"></span>
                 </h1>
 
                 <div class="info_panel">
@@ -45,17 +49,33 @@
                         <span class="item_value"> Available </span>
                     </div>
                 </div>
-                    
-                <div class="icons_links">
 
+
+                <div class="icon_links" style="font-size: 2rem">
+                    <a href="https://web.facebook.com/wojtek.opulski?_rdc=1&_rdr" target="_blank" class="icon_item"><i class="fab fa-facebook-f fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/wojciech-opulski-b0a52a16b/" target="_blank" class="icon_item"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                    <a href="https://github.com/woopul" target="_blank" class="icon_item"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="mailto:wojtekopulski@gmail.com" target="_blank" class="icon_item"><i class="far fa-envelope fa-2x"></i></a>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/particles.min.js"></script>
+    <script>
+        $(document).ready( () =>{
+            var typed = new Typed('#typed', {
+                strings: ["Web Developer", "Wojciech Opulski" , "from Poland"],
+                backSpeed: 40,
+                typeSpeed: 40,
+                backDelay: 700,
+                loop: true,
+                loopCount: Infinity,
+            });
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src="js/app.js"></script>
 </body>
 
