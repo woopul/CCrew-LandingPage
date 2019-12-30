@@ -5,7 +5,6 @@
      font-family: 'Quicksand', sans-serif;
      font-size: 20px;
 }
-
 .main_wrapper{
      width: 100%;
      background-image: url("../images/home_personal.jpg");
@@ -14,7 +13,6 @@
      background-repeat: no-repeat;
      /* margin: auto; */
 }
-
 #particles-js {
      height: 100vh;
      width: 100vw;
@@ -29,26 +27,24 @@
      top: 0;
      left: 0;
 }
-/*.content{*/
-     /*position: absolute;*/
-/*}*/
-
+.content{
+     height: 100vh;
+     display: flex;
+     flex-flow: column;
+}
 h1{
      padding-top: 15vh;
      text-align: center;
-
      color: white;
      font-size: 2.5rem;
 }
 .typo {
      font-size: 2.5rem;
-
      color: #ffbb06;
 }
 .carriage{
      font-size: 2.5rem;
 }
-
 .info_panel{
      display: flex;
      flex-direction: column;
@@ -61,54 +57,68 @@ h1{
 .item_value {
      color: rgba(255,255,255,0.45)
 }
-.icon_links{
-     width: 100vh;
-     height: 100vh;
+.icon_links {
+     width: 60vw;
+     height: 100%;
      color: white;
+     padding: 40px;
+     margin: 0 auto;
 }
-.icon_item{
+.icon_item {
+     display: flex;
+     justify-content: center;
+     align-items: center;
      text-align: center;
      margin: 3px 3px;
      border: 1px solid white;
      opacity: 0.8;
      text-decoration: none;
      color: rgba(255,255,255,0.6);
-     display: flex;
      flex-wrap: wrap;
-     width: 50%;
-     height:50%;
+     width: 100%;
+     height:25%;
 
      transition: transform, filter 0.7s,0.7s;
 }
-
-
-
-@media only screen and (min-width: 600px){
-     .icon_item{
-          border: none;
-          width: 50%;
-          height:50%;
-     }
-     .icon_links{
-          margin: 40px auto;
-          /*border: 2px solid green;*/
-          width: 40vw;
-          height: 15vh;
-          display: flex;
-     }
-     .icon_item:hover{
+.icon_item:hover {
           color: white;
           cursor: pointer;
           filter: brightness(120%);
           transform: scale(1.04);
           text-decoration: none;
+}
+.icon_item:visited{
+     text-decoration: none;
+}
+.icon_item:active{
+     color: rgba(255,255,255,0.6);
+     transform: scale(0.98);
+}
+@media only screen and (min-width: 600px){
+     .icon_links{
+          margin: 40px auto;
+          /*border: 2px solid green;*/
+          padding: 0;
+          width: 40vw;
+          height: 15vh;
+          display: flex;
      }
-     .icon_item:visited{
-          text-decoration: none;
+     .icon_item{
+          border: none;
+          width: 50%;
+          height:50%;
      }
-     .icon_item:active{
-          color: rgba(255,255,255,0.6);
-          transform: scale(0.98);
+}
+@media only screen and (max-width: 520px){
+     h1{
+          padding-top: 15vh;
+          text-align: center;
+          color: white;
+          font-size: 2rem;
+     }
+     .typo {
+          font-size: 2rem;
+          color: #ffbb06;
      }
 }
 
